@@ -5,8 +5,3 @@ terraform {
     region = "ap-southeast-1"
   }
 }
-
-resource "aws_s3_bucket" "static_bucket" {
- bucket = "wxs3.sctp-sandbox.com"
- force_destroy = true
-}
