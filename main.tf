@@ -5,3 +5,8 @@ terraform {
     region = "ap-southeast-1"
   }
 }
+
+resource "aws_s3_bucket" "static_bucket" {
+ bucket = "wx-state.tfstate"
+ force_destroy = true
+}
