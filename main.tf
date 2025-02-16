@@ -1,7 +1,12 @@
 terraform {
   backend "s3" {
-    bucket = "wx-tfstate"
+    bucket = "sctp-ce8-tfstate"
     key    = "wx-state.tfstate"
     region = "ap-southeast-1"
   }
+}
+
+resource "aws_s3_bucket" "static_bucket" {
+ bucket = "wxs3.sctp-sandbox.com"
+ force_destroy = true
 }
