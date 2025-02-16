@@ -1,11 +1,7 @@
-provider "aws" {
-  region = ""
-}
-
 terraform {
   backend "s3" {
-    bucket = ""
-    key    = ""
-    region = ""
+    bucket = "wx-tfstate"
+    key    = "wx-state.tfstate"
+    region = "ap-southeast-1"
   }
 }
